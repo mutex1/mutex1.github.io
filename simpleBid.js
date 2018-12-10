@@ -298,7 +298,7 @@ function getProductInfo() {
 
 function bidForProduct(n) {
   if(n == 0){
-    let bidTokens = $("#tb_iphone7").val();
+    let bidTokens = parseInt($("#tb_iphone7").val());
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_iphone7").val("");
     simpleBid.bid("iPhone 7", bidTokens, function (e, r){
