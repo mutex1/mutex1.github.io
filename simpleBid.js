@@ -276,7 +276,7 @@ function getToken() {
 
 function getTokenInfo() {
 
-  simpleVote.getTokenPrice(function(e,r){
+  simpleBid.getTokenPrice(function(e,r){
     tokenPrice = parseFloat(web3.fromWei(r.toString()));
     document.getElementById('token-cost').innerHTML = tokenPrice + "ETH";
   });
