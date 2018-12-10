@@ -296,7 +296,7 @@ function getProductInfo() {
   });
 }
 
-function voteForCandidate(n) {
+function bidForProduct(n) {
   if(n == 0){
     let bidTokens = $("#tb_iphone7").val();
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
