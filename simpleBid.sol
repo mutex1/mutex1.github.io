@@ -8,6 +8,7 @@ contract simpleAction {
         mapping (bytes32 => uint) myBid; // 내 입찰가
     }
 
+
     mapping (address => bidder) public bidders; // 입찰자들의 주소
     mapping (bytes32 => uint) public highest; // 최고 입찰가
 
