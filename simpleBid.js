@@ -305,35 +305,35 @@ function bidForProduct(n) {
       getProductInfo();
     });
   } else if(n == 1){
-    let bidTokens = $("#tb_iphone8").val();
+    let bidTokens = parseInt($("#tb_iphone8").val());
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_iphone8").val("");
     simpleBid.bid("iPhone 8", bidTokens, function (e, r){
       getProductInfo();
     });
   } else if(n == 2){
-    let bidTokens = $("#tb_iphoneX").val();
+    let bidTokens = parseInt($("#tb_iphoneX").val());
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_iphoneX").val("");
     simpleBid.bid("iPhone X", bidTokens, function (e, r){
       getProductInfo();
     });
   } else if(n == 3){
-    let bidTokens = $("#tb_galaxyS9").val();
+    let bidTokens = parseInt($("#tb_galaxyS9").val());
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_galaxyS9").val("");
     simpleBid.bid("Galaxy S9", bidTokens, function (e, r){
       getProductInfo();
     });
   } else if(n == 4){
-    let bidTokens = $("#tb_galaxyNote9").val();
+    let bidTokens = parseInt($("#tb_galaxyNote9").val());
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_galaxyNote9").val("");
     simpleBid.bid("Galaxy Note 9", bidTokens, function (e, r){
       getProductInfo();
     });
   } else if(n == 5){
-    let bidTokens = $("#tb_LGG7").val();
+    let bidTokens = parseInt($("#tb_LGG7").val());
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_LGG7").val("");
     simpleBid.bid("LG G7", bidTokens, function (e, r){
