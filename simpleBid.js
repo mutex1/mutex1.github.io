@@ -1,4 +1,4 @@
-let contractAddress = '0x23ddfd7e5cfb2c2af1f7f5c491082a56a77d19ec';
+let contractAddress = '0x94e52eb0d5d0aed4158bc7853313be2262217b01';
 let abi =
 [
 	{
@@ -71,6 +71,40 @@ let abi =
 		"constant": true,
 		"inputs": [],
 		"name": "getHighestBid",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMyBid",
 		"outputs": [
 			{
 				"name": "",
@@ -286,6 +320,15 @@ function getTokenInfo() {
 }
 
 function getProductInfo() {
+  simpleBid.getMyBid(function(e,r){
+    document.getElementById('myself_iphone7').innerHTML = r[0].toString();
+    document.getElementById('myself_iphone8').innerHTML = r[1].toString();
+    document.getElementById('myself_iphoneX').innerHTML = r[2].toString();
+    document.getElementById('myself_galaxyS9').innerHTML = r[3].toString();
+    document.getElementById('myself_galaxyNote9').innerHTML = r[4].toString();
+    document.getElementById('myself_LGG7').innerHTML = r[5].toString();
+  });
+
   simpleBid.getHighestBid(function(e,r){
     document.getElementById('highest_iphone7').innerHTML = r[0].toString();
     document.getElementById('highest_iphone8').innerHTML = r[1].toString();
@@ -294,6 +337,7 @@ function getProductInfo() {
     document.getElementById('highest_galaxyNote9').innerHTML = r[4].toString();
     document.getElementById('highest_LGG7').innerHTML = r[5].toString();
   });
+
 }
 
 function bidForProduct(n) {

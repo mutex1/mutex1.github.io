@@ -45,6 +45,16 @@ contract simpleAction {
         highest["LG G7"]);
     }
 
+    function getMyBid() view public returns (uint, uint, uint, uint, uint, uint)
+    {
+        return (bidders[msg.sender].myBid["iPhone 7"],
+        bidders[msg.sender].myBid["iPhone 8"],
+        bidders[msg.sender].myBid["iPhone X"],
+        bidders[msg.sender].myBid["Galaxy S9"],
+        bidders[msg.sender].myBid["Galaxy Note 9"],
+        bidders[msg.sender].myBid["LG G7"]);
+    }
+
     function bid(bytes32 productName, uint tokensToBid)
     {
         uint index = getProductIndex(productName);
