@@ -304,7 +304,7 @@ function voteForCandidate(n) {
     simpleBid.bid("iPhone 7", bidTokens, function (e, r){
       getProductInfo();
     });
-  else if(n == 1){
+  } else if(n == 1){
     let bidTokens = $("#tb_iphone8").val();
     $("#msg").html("Bid has been submitted. The bid count will increment as soon as the vote is recorded on the blockchain. Please wait.")
     $("#tb_iphone8").val("");
